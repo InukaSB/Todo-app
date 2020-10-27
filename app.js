@@ -58,11 +58,20 @@ function deleteCheck(e) {
     }
 
     //check mark
-    if (item.classList[0] === "complete-btn") {
+    if (item.classList[0] === "complete-btn" ) {
         const todo = item.parentElement;
-        todo.classList.toggle('completed');
-        removeLocalstorageTodos(todo);
+        if(!todo.classList.contains('completed')){
+            todo.classList.add('completed');
+            removeLocalstorageTodos(todo);
+        } else {
+            todo.classList.remove('completed');
+            saveLocalTodos(todo);
+        }
     }
+    // } else if (item.classList[0] === "complete-btn"){
+    //     todo.classList.remove('completed');
+    //     saveLocalTodos(todo);
+    // }
 }
 
 function filterTodo(e) {
@@ -148,24 +157,3 @@ function removeLocalstorageTodos(todo){
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-
-
-
-
-
-
-
-// todoItem.addEventListener('mousemove', (e) => {
-//     let xAxis = (window.innerWidth / 2 - e.pageX) / 3;
-//     let yAxis = (window.innerHeight / 2 - e.pageY) / 3;
-//     todoItem.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-// });
-
-// todoItem.addEventListener('mouseenter', e => {
-    
-    
-// });
-
-// todoItem.addEventListener('mouseleave', e =>{
-//     todoItem.style.transition = 'all 0.5s ease';
-// });
