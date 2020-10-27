@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <script src="https://kit.fontawesome.com/68f4ef60c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawsome.all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Incompleted</option>
+                </select>
+            </div>
+            <div class="inputLocation">
+                <input type="text" class="todo-input" placeholder="Add a task">
+                <button class="todo-button" type="submit">
+                    <i class="fas fa-plus"></i>
+                    <!-- <i class="far fa-plus-square"></i>         -->
+                    <!-- <i class="fas fa-plus"></i> -->
+                </button>
+            </div>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
