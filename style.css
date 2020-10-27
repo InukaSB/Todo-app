@@ -26,14 +26,15 @@ body {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    height: 85vh;
-    width: 420px;
+    height: 90vh;
+    width: 500px;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 20px;
     /* box-shadow: 0px 0px 100px rgba(0,0,0,0.3); */
     /* position: absolute; */
     overflow: scroll;
-    transition: all 0.5s ease;
+    /* overflow-x: hidden; */
+    transition: all 1s ease;
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +43,7 @@ body {
 
 form {
     z-index: 5;
+    transition: all 0.5s ease;
 }
 
 .inputLocation{
@@ -51,6 +53,7 @@ form {
     align-items: center;
     position: sticky;
     width: 100%;
+    border-top: 1px rgb(206, 206, 206) solid;
 }
 
 form input, form button{
@@ -72,7 +75,7 @@ form input {
     transition: all 0.5s ease;
     flex: 1;
     width: 100%;
-    /* font-size: 1rem; */
+    /* font-size: 1.2rem; */
     border-bottom: 1px rgb(206, 206, 206) solid;
     border-radius: 0px 0px 0px 10px;
 }
@@ -129,7 +132,7 @@ form button:hover i{
     margin: 20px 0px 20px 0px;
     border-bottom: 2px rgb(192, 192, 192) solid;    
     border-radius: 10px;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
     height: fit-content;
     /* border-bottom: 2px solid black; */
     /* border: 1px 0px 0px 0px rgb(73, 73, 73) solid; */
@@ -172,6 +175,10 @@ form button:hover i{
 
 .trash-btn:hover {
     color: rgb(255, 111, 71);
+}
+
+.completed .trash-btn, .completed .complete-btn {
+    color: rgb(85, 91, 165);
 }
 
 .todo-item {
@@ -241,12 +248,12 @@ select {
 }
 
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 500px){
     .container{
         height: 100vh;
         box-shadow: none;
         border-radius: 0px;
-        background-color: rgba(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .inputLocation {
@@ -269,11 +276,22 @@ select {
     }
 
     .todo {
-        margin: 10px 0px 10px 0px;
         border-bottom: 1px rgb(206, 206, 206) solid;  
+        margin: 0;
+        border-radius: 0%;
+        padding: 10px 0px 10px 0px;
     }
 
     .todo-input:hover {
         background: rgb(255, 255, 255);
     }
+
+    .completed {
+        text-decoration: line-through;
+        opacity: 0.5;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px rgb(206, 206, 206) solid;  
+    }
+
+
 }
