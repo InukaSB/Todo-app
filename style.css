@@ -172,7 +172,7 @@ form button:hover i{
     font-size: 1rem;
     border-radius: 0px;
     outline: none;
-    height: 50px;
+    height: 100%;
     width: 50px;
     transition: all 0.3s ease;
     /* border-bottom: 1px solid black; */

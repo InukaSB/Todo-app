@@ -60,12 +60,13 @@ function deleteCheck(e) {
     //check mark
     if (item.classList[0] === "complete-btn" ) {
         const todo = item.parentElement;
+        const todotext = todo.children[0].innerText;
         if(!todo.classList.contains('completed')){
             todo.classList.add('completed');
             removeLocalstorageTodos(todo);
         } else {
             todo.classList.remove('completed');
-            saveLocalTodos(todo);
+            saveLocalTodos(todotext);
         }
     }
     // } else if (item.classList[0] === "complete-btn"){
