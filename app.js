@@ -13,8 +13,6 @@ todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
 
 //Functions
-
-
 function addTodo(e) {
     //Prevent form from submitting
     e.preventDefault();
