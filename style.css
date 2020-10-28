@@ -134,6 +134,8 @@ form button:hover i{
     border-radius: 10px;
     transition: all 0.5s ease;
     height: fit-content;
+    /* clip-path: inset(0% 0% 0% 0%); */
+    clip-path: circle(100%);
     /* border-bottom: 2px solid black; */
     /* border: 1px 0px 0px 0px rgb(73, 73, 73) solid; */
 }
@@ -195,7 +197,9 @@ form button:hover i{
 }
 
 .fall{
-    transform: translateY(-5px);
+    clip-path: circle(0% at 96.5% 50%);
+    /* clip-path: inset(0% 0% 0% 100%); */ 
+    /* transform: translateY(-5px); */
     opacity: 0;
 }
 
