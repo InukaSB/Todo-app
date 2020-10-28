@@ -34,7 +34,7 @@ body {
     /* position: absolute; */
     overflow: scroll;
     /* overflow-x: hidden; */
-    transition: all 1s ease;
+    transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar {
@@ -253,7 +253,7 @@ select {
         height: 100vh;
         box-shadow: none;
         border-radius: 0px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     .inputLocation {
